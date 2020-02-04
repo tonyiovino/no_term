@@ -2,20 +2,28 @@
 
 int main()
 {
-    int u_numero, c_numero, somma; 
+	int esterno = 0;
+	int interno = 0;
 
-    printf("Inserisca un intero: ");
-    scanf("%d", &u_numero);
+	FILE *f = fopen("sum.dat","r");
 
-    FILE *f = ("sun.dat", "r");
+	if(esterno != 0) {
+	
 
-    fscanf(f, "%d", &s_numero);
+	}
 
-    somma = u_numero + s_numero;
+/*	printf("Inserisca un intero: ");
+	scanf("%d", &u_numero);
 
-    printf("La somma è: "%d", somma);
+	FILE *f = ("sun.dat", "r");
 
-    fclose(f);
+	fscanf(f, "%d", &s_numero);
 
-    return 0;
+	somma = u_numero + s_numero;
+
+	printf("La somma è: "%d", somma);
+
+	fclose(f);
+*/
+	return 0;
 }
