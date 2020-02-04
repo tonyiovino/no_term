@@ -24,6 +24,6 @@ int main()
 	printf("La somma è: "%d", somma);
 
 	fclose(f);
-*/
+*/t
 	return 0;
 }
