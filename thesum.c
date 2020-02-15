@@ -5,12 +5,18 @@ int main()
 	int esterno = 0;
 	int interno = 0;
 
-	FILE *f = fopen("sum.dat","r");
+	printf("Inserisca un numero.\n");
+	scanf("%d", interno);
 
 	if(esterno != 0) {
-	
-
+		FILE *f = fopen("sum.dat","r");
 	}
+
+	else{
+		esterno = 0;
+	}
+	
+	/*Promemria devo chiudere il file.*/
 
 /*	printf("Inserisca un intero: ");
 	scanf("%d", &u_numero);
@@ -24,6 +30,6 @@ int main()
 	printf("La somma è: "%d", somma);
 
 	fclose(f);
-*/t
+*/
 	return 0;
 }
