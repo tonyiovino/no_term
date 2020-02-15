@@ -1,20 +1,24 @@
-#include <studio.h>
+#include <stdio.h>
 
 int main()
 {
 	int esterno = 0;
 	int interno = 0;
 
-	printf("Inserisca un numero.\n");
-	scanf("%d", interno);
+	printf("Inserisca un numero: ");
+	scanf("%d\n", interno);
+
+	FILE *f = fopen("sum.dat","r");
 
 	if(esterno != 0) {
-		FILE *f = fopen("sum.dat","r");
+		printf("Il file non esiste!");
+		FILE *f = fopen("sum.dat","w");
 	}
 
 	else{
 		esterno = 0;
 	}
+
 	
 	/*Promemria devo chiudere il file.*/
 
