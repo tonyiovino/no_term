@@ -2,25 +2,35 @@
 
 int main()
 {
+	FILE *f;	
 	int num = 0;
 	int f_num = 0;
 
-	printf("Inserisca un numero: ");
-	scanf("%d\n", &num);
+	
+	f = fopen("sum.dat","r");
 
-	FILE *f = fopen("sum.dat","r");
-
-	if(f_num != 0) {
-		FILE *f = fopen("sum.dat","w");
-		fprintf(f, num, "\n");
-		fclose(f);
+	if(f != 0) {
+		FILE *f = fopen("sum.dat","r");
+		fscanf(f, "%d", &f_num);
 	}
 
 	else{
 		f_num = 0;
+		fprintf(f, "%d\n", num);
 	}
 
-	
+	fclose(f);
+
+	printf("Inserisca un numero: ");
+	scanf("%d", &num);
+
+	f_num = num + f_num;
+
+	f = fopen("sum.dat","w");
+	fprintf(f, "%d\n", f_num);
+
+	fclose(f);
+
 	/*Promemria devo chiudere il file.*/
 
 /*	printf("Inserisca un intero: ");
