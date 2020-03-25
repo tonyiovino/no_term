@@ -2,21 +2,22 @@
 
 int main()
 {
-	int esterno = 0;
-	int interno = 0;
+	int num = 0;
+	int f_num = 0;
 
 	printf("Inserisca un numero: ");
-	scanf("%d\n", interno);
+	scanf("%d\n", &num);
 
 	FILE *f = fopen("sum.dat","r");
 
-	if(esterno != 0) {
-		printf("Il file non esiste!");
+	if(f_num != 0) {
 		FILE *f = fopen("sum.dat","w");
+		fprintf(f, num, "\n");
+		fclose(f);
 	}
 
 	else{
-		esterno = 0;
+		f_num = 0;
 	}
 
 	
