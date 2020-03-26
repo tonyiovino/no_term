@@ -8,13 +8,8 @@ int main()
 	int somma;
 
 	f = fopen("sum.dat","r");
-	fscanf(f, "%d", &f_num);
-
-	printf("Lettura dal file sum.dat in corso...\n");
-	printf("Valore corrente: %d\n\n", f_num);
 
 	if(f) {
-		FILE *f = fopen("sum.dat","r");
 		fscanf(f, "%d", &f_num);
 		printf("Lettura dal file sum.dat in corso...\n");
 		printf("Valore corrente: %d\n\n", f_num);
