@@ -5,18 +5,20 @@ int main()
 	FILE *f;	 
 	int num = 0;
 	int f_num = 0;
+	int somma;
 
-	
 	f = fopen("sum.dat","r");
 	fscanf(f, "%d", &f_num);
 
 	printf("Lettura dal file sum.dat in corso...\n");
 	printf("Valore corrente: %d\n\n", f_num);
 
-
 	if(f) {
 		FILE *f = fopen("sum.dat","r");
 		fscanf(f, "%d", &f_num);
+		printf("Lettura dal file sum.dat in corso...\n");
+		printf("Valore corrente: %d\n\n", f_num);
+
 	}
 
 	else{
@@ -29,14 +31,14 @@ int main()
 	printf("Inserisca il valore da sommare: ");
 	scanf("%d", &num);
 
-	f_num = num + f_num;
+	somma = num + f_num;
 
 	f = fopen("sum.dat","w");
-	fprintf(f, "%d\n", f_num);
+	fprintf(f, "%d\n", somma);
 
-	fscanf(f, "%d", &f_num);
+	fscanf(f, "%d", &somma);
 
-	printf("\nHo letto il valore %d\n", f_num);
+	printf("\nHo letto il valore %d\n", somma);
 
 	printf("Salvataggio nel file sum.dat in corso...\n");
 
