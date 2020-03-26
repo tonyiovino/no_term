@@ -14,21 +14,28 @@ int main()
 		printf("Lettura dal file sum.dat in corso...\n");
 		printf("Valore corrente: %d\n\n", f_num);
 
+		printf("Inserisca il valore da sommare: ");
 	}
 
 	else{
 		f_num = 0;
+
+		f = fopen("sum.dat","w");
+
 		fprintf(f, "%d\n", num);
+		printf("Il file sum.dat non esiste.\nCreare un nuovo valore: ");
 	}
 
 	fclose(f);
 
-	printf("Inserisca il valore da sommare: ");
+	
 	scanf("%d", &num);
 
 	somma = num + f_num;
 
 	f = fopen("sum.dat","w");
+
+	fprintf(f, "%d\n", num);
 	fprintf(f, "%d\n", somma);
 
 	fscanf(f, "%d", &somma);
@@ -39,10 +46,5 @@ int main()
 
 	fclose(f);
 
-	/*Promemria:*/
-
-/*
-	IL PROGRAMMA FUNZIONA SOLO SE IL FILE "sum.dat" ESISTE GIA'
-*/
 	return 0;
 }
