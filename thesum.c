@@ -2,14 +2,14 @@
 
 int main()
 {
-	FILE *f;	
+	FILE *f;	 
 	int num = 0;
 	int f_num = 0;
 
 	
 	f = fopen("sum.dat","r");
 
-	if(f != 0) {
+	if(f) {
 		FILE *f = fopen("sum.dat","r");
 		fscanf(f, "%d", &f_num);
 	}
@@ -31,20 +31,10 @@ int main()
 
 	fclose(f);
 
-	/*Promemria devo chiudere il file.*/
+	/*Promemria:*/
 
-/*	printf("Inserisca un intero: ");
-	scanf("%d", &u_numero);
-
-	FILE *f = ("sun.dat", "r");
-
-	fscanf(f, "%d", &s_numero);
-
-	somma = u_numero + s_numero;
-
-	printf("La somma è: "%d", somma);
-
-	fclose(f);
+/*
+	IL PROGRAMMA FUNZIONA SOLO SE IL FILE "sum.dat" ESISTE GIA'
 */
 	return 0;
 }
