@@ -18,14 +18,11 @@ int main()
 	}
 
 	else{
-		f = fopen("sum.dat","w");
-
 		fprintf(stderr, "Il file sum.dat non esiste.\nCreare un nuovo valore: ");
 	}
 
 	fclose(f);
 
-	
 	scanf("%d", &num);
 
 	somma = num + f_num;
