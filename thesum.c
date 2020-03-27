@@ -35,7 +35,6 @@ int main()
 
 	f = fopen("sum.dat","w");
 
-	fprintf(f, "%d\n", num);
 	fprintf(f, "%d\n", somma);
 
 	fscanf(f, "%d", &somma);
