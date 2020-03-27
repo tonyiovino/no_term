@@ -15,13 +15,13 @@ int main()
 		printf("Valore corrente: %d\n\n", f_num);
 
 		printf("Inserisca il valore da sommare: ");
+
+		fclose(f);
 	}
 
 	else{
 		fprintf(stderr, "Il file sum.dat non esiste.\nCreare un nuovo valore: ");
 	}
-
-	fclose(f);
 
 	scanf("%d", &num);
 
@@ -30,8 +30,6 @@ int main()
 	f = fopen("sum.dat","w");
 
 	fprintf(f, "%d\n", somma);
-
-	fscanf(f, "%d", &somma);
 
 	printf("\nHo letto il valore %d\n", somma);
 
