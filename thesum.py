@@ -1,11 +1,11 @@
-num = 0
-f_num = 0
-file = f                #Non so se sia giusto, non credo.
+import os
+
+f = 'sum.dat'
 
 if os.path.isfile(f):
 	f = open('sum.dat', 'r');
 	string = f.readline()
-	f_num = int(f_num)
+	f_num = int(string)
 	print('Lettura dal file sum.dat in corso...')
 	print('Valore corrente: ', f_num)
 	print('Inserisca il valore da sommare: ')
