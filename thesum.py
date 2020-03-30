@@ -2,7 +2,6 @@ import os
 
 f = 'sum.dat'
 f_num = 0
-f_num = str(f_num)
 
 if os.path.isfile(f):
 	f = open(f, 'r');
