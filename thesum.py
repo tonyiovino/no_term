@@ -1,20 +1,22 @@
 import os
 
 f = 'sum.dat'
+f_num = 0
+f_num = str(f_num)
 
 if os.path.isfile(f):
-	f = open('sum.dat', 'r');
+	f = open(f, 'r');
 	string = f.readline()
 	f_num = int(string)
 	print('Lettura dal file sum.dat in corso...')
 	print('Valore corrente: ', f_num)
-	print('Inserisca il valore da sommare: ')
+	print('Faro la somma di un nuovo valore.')
 
 	f.close()
 else:
-	print('Il file sum.dat non esiste.\nCreare un nuovo valore: ')
+	print('Il file sum.dat non esiste.')
 
-num = input()
+num = input('Creare un nuovo valore: ')
 num = int(num)
 somma = f_num + num
 somma = str(somma)
