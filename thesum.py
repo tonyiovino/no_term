@@ -4,7 +4,7 @@ f = 'sum.dat'
 f_num = 0
 
 if os.path.isfile(f):
-	f = open(f, 'r');
+	f = open(f, 'r')
 	string = f.readline()
 	f_num = int(string)
 	print('Lettura dal file sum.dat in corso...')
